@@ -55,11 +55,20 @@ middleImg.src = 'img/mid-page-accent.jpg'
 
 // ====== Nav ======
 const navItems = document.querySelectorAll('a');
-
  navItems.forEach(
    (item, index) =>
   (item.textContent =  siteContent.nav[`nav-item-${index++}`])
 );
+
+const newNavItem = document.createElement('a');
+newNavItem.textContent = "Book Appointment";
+const addNavItems = document.querySelector('nav');
+addNavItems.appendChild(newNavItem);
+
+ const newNavElement = document.createElement('a');
+ newNavElement.textContent = "Events";
+ const addNavElement = document.querySelector('nav');
+addNavElement.prepend(newNavElement);
 
 // ====== Cta content ======
 // CTA h1
