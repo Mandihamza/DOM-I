@@ -62,17 +62,14 @@ const navItems = document.querySelectorAll('a');
 );
 
 // ====== Cta content ======
-  const ctaText =  document.querySelector('.cta-text h1');
-  ctaText.textContent = siteContent.cta.h1;
+// CTA h1
+  const ctaH1=  document.querySelector('.cta-text h1');
+  const ctaText = siteContent.cta.h1.replace(/ /g, " <br> ");
+  ctaH1.innerHTML = ctaText;
 
+//CTA button
   const ctaButton =  document.querySelector('button');
   ctaButton.textContent = siteContent.cta.button;
-
-  // const hoverState = function(event){
-  //   ctaButton.style = ('.cta .cta-text button');
-  // };
-  //
-  // ctaButton.addEventListener('mouseover', hoverState);
 
   // ====== Main content ======
 
