@@ -70,6 +70,11 @@ addNavItems.appendChild(newNavItem);
  const addNavElement = document.querySelector('nav');
 addNavElement.prepend(newNavElement);
 
+const navStyle = document.querySelectorAll('header nav a');
+navStyle.forEach(function (a) {
+  a.style.color = 'green'
+});
+
 // ====== Cta content ======
 // CTA h1
   const ctaH1=  document.querySelector('.cta-text h1');
